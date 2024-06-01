@@ -20,7 +20,7 @@ paths:
     get:
       summary: test
       description: test
-      operationId: data-fields
+      operationId: datafields
       responses:
         '200':
           description: Successfully retrieved data.
