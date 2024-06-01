@@ -1,3 +1,7 @@
 requests
 invoke
 Flask==3.0.0
+numpy
+pandas
+joblib
+tqdm
