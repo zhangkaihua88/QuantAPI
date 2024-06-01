@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: WorldQuant API
+  description: using api in gpt
+  version: 0.1.0
+servers:
+  - url: https://wqapi.vercel.app
+    description: Main (production) server
+paths:
+  /authentication:
+    get:
+      summary: Authenticate a user and retrieve a cookie
+      operationId: authentication
+      responses:
+        '200':
+          description: Authentication successful
+        '401':
+          description: Authentication failed
+  /alphas/jgeYkA9/recordsets/pnl:
+    get:
+      summary: test
+      description: test
+      operationId: test
+      responses:
+        '200':
+          description: Successfully retrieved data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      description: Data items
+
