@@ -20,7 +20,7 @@ paths:
     get:
       summary: test
       description: test
-      operationId: test
+      operationId: data-fields
       responses:
         '200':
           description: Successfully retrieved data.
@@ -38,7 +38,7 @@ paths:
     get:
       summary: test
       description: test
-      operationId: test
+      operationId: alphas
       responses:
         '200':
           description: Successfully retrieved data.
