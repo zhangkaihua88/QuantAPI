@@ -16,7 +16,7 @@ paths:
           description: Authentication successful
         '401':
           description: Authentication failed
-  /data-sets?instrumentType=EQUITY®ion=USA&delay=1&universe=TOP3000:
+  /data-fields?dataset.id=fundamental23&delay=1&instrumentType=EQUITY&limit=20&offset=0&region=JPN&universe=TOP1600:
     get:
       summary: test
       description: test
