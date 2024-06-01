@@ -30,7 +30,7 @@ def login():
     # s.auth = (username, password)
     # response = s.post('https://api.worldquantbrain.com/authentication')
     # print(response)
-    return headers
+    return type(headers)
 
 # @app.route('/<path:path>', methods=['GET', 'POST'])
 # def redirect_to_other(path):
