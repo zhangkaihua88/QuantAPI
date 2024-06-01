@@ -22,7 +22,13 @@ def about():
 
 @app.route('/authentication', methods=['GET'])
 def login():
-    headers = request.headers
+    headers_keys = dict(request.headers)
+    
+    # 转换为列表（方便查看或其他操作）
+    # headers_list = list(headers_keys)
+    
+    return f"{headers_keys}"
+    # headers = request.headers.keys()
     # username = "***REMOVED***"
     # password = "***REMOVED***"
 
@@ -31,14 +37,16 @@ def login():
     # response = s.post('https://api.worldquantbrain.com/authentication')
     # print(response)
     # return type(headers)
-    user_agent = request.headers.get('User-Agent')
+    # user_agent = request.headers.get('User-Agent')
     
     # Alternatively, you can use dictionary-like access
-    host = request.headers['Host']
+    # host = request.headers['Host']
 
-    return f"User-Agent: {user_agent}, Host: {host}"
+    # return f"User-Agent: {user_agent}, Host: {host}"
 
 # @app.route('/<path:path>', methods=['GET', 'POST'])
 # def redirect_to_other(path):
 #     # 这里将所有除登录外的请求重定向到其他网站
 #     return redirect(f'https://otherwebsite.com/{path}')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080, debug=True)
