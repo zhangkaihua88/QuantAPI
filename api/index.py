@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
@@ -22,14 +22,15 @@ def about():
 
 @app.route('/authentication', methods=['GET'])
 def login():
-    username = "***REMOVED***"
-    password = "***REMOVED***"
+    headers = request.headers
+    # username = "***REMOVED***"
+    # password = "***REMOVED***"
 
-    s = requests.Session()
-    s.auth = (username, password)
-    response = s.post('https://api.worldquantbrain.com/authentication')
-    print(response)
-    return '登录成功'
+    # s = requests.Session()
+    # s.auth = (username, password)
+    # response = s.post('https://api.worldquantbrain.com/authentication')
+    # print(response)
+    return headers
 
 # @app.route('/<path:path>', methods=['GET', 'POST'])
 # def redirect_to_other(path):
