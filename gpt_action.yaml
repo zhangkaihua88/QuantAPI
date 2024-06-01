@@ -16,7 +16,7 @@ paths:
           description: Authentication successful
         '401':
           description: Authentication failed
-  /alphas/jgeYkA9/recordsets/pnl:
+  /data-sets?instrumentType=EQUITY®ion=USA&delay=1&universe=TOP3000:
     get:
       summary: test
       description: test

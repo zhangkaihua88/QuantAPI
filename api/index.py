@@ -14,9 +14,9 @@ BASE_AUTH = ''
 
 app = Flask(__name__)
 
-def wait_get(sess, url):
+def wait_get(sess, url, params=None):
     while True:
-        response = sess.get(url)
+        response = sess.get(url, params=params)
         if response.headers.get("Retry-After", 0) == 0:
             break
         sleep(float(response.headers["Retry-After"]))
@@ -42,8 +42,9 @@ def login():
 def redirect_to_other(path):
     Authorization = request.headers.get('Authorization', BASE_AUTH)
     Authorization = Authorization.split(' ')[-1]
-    response = wait_get(ALL_SESS[Authorization], f"https://api.worldquantbrain.com/{path}")
+    response = wait_get(ALL_SESS[Authorization], f"https://api.worldquantbrain.com/{path}", request.args)
     return response.text
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
