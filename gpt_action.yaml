@@ -34,4 +34,22 @@ paths:
                     items:
                       type: object
                       description: Data items
+  /alphas/jgeYkA9:
+    get:
+      summary: test
+      description: test
+      operationId: test
+      responses:
+        '200':
+          description: Successfully retrieved data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      description: Data items
 
