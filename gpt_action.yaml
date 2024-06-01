@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: WorldQuant API
+  title: Quant API
   description: using api in gpt
   version: 0.1.0
 servers:
