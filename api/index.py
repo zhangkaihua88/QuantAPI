@@ -30,7 +30,13 @@ def login():
     # s.auth = (username, password)
     # response = s.post('https://api.worldquantbrain.com/authentication')
     # print(response)
-    return type(headers)
+    # return type(headers)
+    user_agent = request.headers.get('User-Agent')
+    
+    # Alternatively, you can use dictionary-like access
+    host = request.headers['Host']
+
+    return f"User-Agent: {user_agent}, Host: {host}"
 
 # @app.route('/<path:path>', methods=['GET', 'POST'])
 # def redirect_to_other(path):
